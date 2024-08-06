@@ -41,10 +41,10 @@ const ResumeSchema = new Schema({
     email: { type: String, required: true },
     location: { type: String, required: true },
     bio: { type: String, required: true },
-    github: { type: String, required: true },
-    leetcode: { type: String, required: true },
-    other: { type: String, required: true },
-    portfolio: { type: String, required: true },
+    github: { type: String },
+    leetcode: { type: String },
+    other: { type: String },
+    portfolio: { type: String },
     education: [educationSchema], // Array of education sub-documents
     experience: [experienceSchema], // Array of experience sub-documents
     certifications: [certificationSchema], // Array of certification sub-documents
