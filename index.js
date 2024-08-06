@@ -5,7 +5,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import authRoute from './routes/auth.js';
 import userRoute from './routes/user.js';
-// import resumeRoute from './routes/resume.js';
+import resumeRoute from './routes/resume.js';
 
 const app = express();
 dotenv.config(); //to use .env we have to make some configuration
@@ -37,7 +37,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
-// app.use("/api/resumes", resumeRoute);
+app.use("/api/resumes", resumeRoute);
 
 //error handling middleware
 app.use((err, req, res, next) => {
