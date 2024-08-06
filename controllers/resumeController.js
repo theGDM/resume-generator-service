@@ -13,7 +13,7 @@ export const getAllResumesForUser = async (req, res, next) => {
 export const createResume = async (req, res, next) => {
     const { userId } = req.params;
 
-    const newResume = await Task({
+    const newResume = await Resume({
         userId: userId,
         ...req.body,
     });
